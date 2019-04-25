@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import styles from './HomeScreenStyleSheet';
 import PrimaryBtn from '../../components/PrimaryBtn';
 
-class HomeScreen extends Component {
+class HomeScreen extends React.Component {
   goToScreen = (screenName) => {
     Navigation.push(this.props.componentId, {
       component: {

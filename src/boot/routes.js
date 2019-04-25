@@ -1,21 +1,25 @@
 import { Navigation } from 'react-native-navigation';
 
-// import Home from '../screens/Home';
-// import Search from '../screens/Search';
-// import History from '../screens/History';
+import { Provider } from 'react-redux';
+
+import store from '../redux/store';
 
 export default function registerScreens() {
   Navigation.registerComponent(
     'Home',
     () => require('../screens/Home').default
   );
-  Navigation.registerComponent(
+  Navigation.registerComponentWithRedux(
     'Search',
-    () => require('../screens/Search').default
+    () => require('../screens/Search').default,
+    Provider,
+    store
   );
-  Navigation.registerComponent(
+  Navigation.registerComponentWithRedux(
     'History',
-    () => require('../screens/History').default
+    () => require('../screens/History').default,
+    Provider,
+    store
   );
   Navigation.registerComponent('Boot', () => require('./Boot').default);
 }
