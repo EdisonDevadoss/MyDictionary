@@ -1,5 +1,5 @@
 const defaultEnv = {
-  googleApiKey: 'AIzaSyAV0MdFUWuH6sDJRg_5KdwKMtrpdVKjo6c'
+  searchUrl: 'https://googledictionaryapi.eu-gb.mybluemix.net/?define='
 };
 const devEnv = {};
 
